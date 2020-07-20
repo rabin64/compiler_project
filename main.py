@@ -2,9 +2,9 @@ from lexer import Lexer
 from parse import Parser
 from codegen import CodeGen
 
-fname = "input.toy"
-with open(fname) as f:
-    text_input = f.read()
+text_input = """
+print(4 + 4 - 2);
+"""
 
 lexer = Lexer().get_lexer()
 tokens = lexer.lex(text_input)
